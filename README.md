@@ -1,4 +1,4 @@
-# Autocomplate
+# Autocomplate.js
 一个同时兼容移动端和pc端的一个自动完成的组件
 
 ## version
@@ -44,4 +44,5 @@
 
 ### 注意 source 指向的是你的数据源，即要显示的数据
 
-## demo(https://github.com/yanhaijing/zepto.fullpage/issues)
+## 查看演示
+demo(https://github.com/yanhaijing/zepto.fullpage/issues)
