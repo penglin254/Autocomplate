@@ -45,4 +45,4 @@
    注意 source 指向的是你的数据源，即要显示的数据
 
 ## 查看演示
-[demo](https://github.com/yanhaijing/zepto.fullpage/issues)
+[demo](https://penglin254.github.io/Autocomplate/example/index.html)
