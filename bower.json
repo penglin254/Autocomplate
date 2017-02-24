@@ -1,0 +1,29 @@
+{
+  "name": "autocomplate",
+  "homepage": "https://github.com/penglin254/Autocomplate",
+  "authors": [
+    "penglin <139193411@qq.com>"
+  ],
+  "description": "input autocomplate",
+  "main": "dist/autocomplate.min.js",
+  "keywords": [
+    "rely",
+    "input",
+    "autocomplate"
+  ],
+  "license": "MIT",
+  "private": true,
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "^1.2.0",
+    "jquery": "^3.1.1"
+  }
+}
