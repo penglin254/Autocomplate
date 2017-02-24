@@ -64,5 +64,6 @@ div.auto_container > div {
     text-indent: .5rem;
     text-align: left;
     width: 100%;
+    cursor: pointer;
     float: left;
 }
