@@ -22,7 +22,7 @@
     Autocomplate.prototype = {
         create: function () {
             var $dom = $('<div class="auto_container"></div>'), that = this, offsetLeft = that.$element.offset().left, offsetTop = that.$element.offset().top;
-            if (this.options.isMobile === false) {
+            if (that.options.isMobile === false) {
                 $dom.css({
                     top: offsetTop + that.$element.height(),
                     left: offsetLeft,
@@ -56,7 +56,7 @@
 
         search: function () {
             var that = this;
-            this.$element.on("input", function () {
+            that.$element.on("input", function () {
                 var arr = new Array(), vLength = $(this).val().length;
                 if (vLength > 0) {
                     for (var i = 0; i < that.options.data.length; i++) {
