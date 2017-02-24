@@ -8,8 +8,8 @@
 可实现移动端和pc的input输入事件，自动检索数据结果。
 
 ## 使用和安装
-### 使用: 如果没bower环境,需要引入jquery或者zepto
-### 安装: bower i
+- 使用: 如果没bower环境,需要引入jquery或者zepto
+- 安装: bower i
 
 ## 兼容性
 ### 移动端:
