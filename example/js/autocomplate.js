@@ -57,11 +57,14 @@
             var that = this;
             this.$element.on("input", function () {
                 var arr = new Array(), vLength = $(this).val().length;
-                for (var i = 0; i < that.options.data.length; i++) {
-                    if (that.options.data[i].substring(0, vLength).indexOf($(this).val()) != "-1") {
-                        arr.push(that.options.data[i]);
+                if (vLength > 0) {
+                    for (var i = 0; i < that.options.data.length; i++) {
+                        if (that.options.data[i].substring(0, vLength).indexOf($(this).val()) != "-1") {
+                            arr.push(that.options.data[i]);
+                        }
                     }
                 }
+
                 that.textVal(arr);
             })
         },
@@ -85,7 +88,6 @@
 
     $.fn.autoComplate = function (options) {
         var autoComplate = new Autocomplate(this, options);
-        // console.log(autoComplate)
         return autoComplate.apply();
     }
 })(window.jQuery || window.Zepto)
