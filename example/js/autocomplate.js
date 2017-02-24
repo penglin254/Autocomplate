@@ -2,6 +2,7 @@
  * github : https://github.com/penglin254
  * author : lin
  * email : 139193411@qq.com
+ * version : 1.0.0
  */
 
 ;(function ($) {
