@@ -40,9 +40,9 @@
 ## 使用插件
    $("input[data-auto='complate']").autoComplate({
                    'data': source,
-   })
+   })<br />
 
-### 注意 source 指向的是你的数据源，即要显示的数据
+   注意 source 指向的是你的数据源，即要显示的数据
 
 ## 查看演示
-demo(https://github.com/yanhaijing/zepto.fullpage/issues)
+[demo](https://github.com/yanhaijing/zepto.fullpage/issues)
