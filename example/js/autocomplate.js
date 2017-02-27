@@ -15,7 +15,7 @@
                 'data': [],
                 'borderColor': '#ddd',
                 'isMobile': false,
-            }
+            },
         this.options = $.extend({}, this.default, opt)
     }
 

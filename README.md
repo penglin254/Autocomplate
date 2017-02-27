@@ -46,3 +46,6 @@
 
 ## 查看演示
 [demo](https://penglin254.github.io/Autocomplate/example/index.html)
+
+## 关于1.1.0
+后续应该会更新移动端的显示情况
