@@ -4,7 +4,7 @@ ul, li, ol, p {
     list-style: none;
 }
 
-*{
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -66,4 +66,8 @@ div.auto_container > div {
     width: 100%;
     cursor: pointer;
     float: left;
+}
+
+div.auto_container > div.active {
+    background-color: #eee;
 }

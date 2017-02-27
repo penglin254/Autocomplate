@@ -2,7 +2,7 @@
  * github : https://github.com/penglin254
  * author : lin
  * email : 139193411@qq.com
- * version : 1.0.0
+ * version : 1.1.0
  */
 
 ;(function ($) {
@@ -16,22 +16,68 @@
                 'borderColor': '#ddd',
                 'isMobile': false,
             },
-        this.options = $.extend({}, this.default, opt)
+            this.options = $.extend({}, this.default, opt)
     }
 
     Autocomplate.prototype = {
         create: function () {
             var $dom = $('<div class="auto_container"></div>'), that = this, offsetLeft = that.$element.offset().left, offsetTop = that.$element.offset().top;
+
+            that.textVal(that.options.data);
+            $('body').append($dom);
+            that.search();
             if (that.options.isMobile === false) {
+                $dom.css({
+                    top: offsetTop + that.$element.height() + 4,
+                    left: offsetLeft,
+                    width: that.$element.width() + 4
+                })
+                that.keyDown();
+            } else {
                 $dom.css({
                     top: offsetTop + that.$element.height(),
                     left: offsetLeft,
                     width: that.$element.width()
                 })
             }
-            that.textVal(that.options.data);
-            $('body').append($dom);
-            that.search();
+
+        },
+
+        keyDown: function () {
+            var that = this, i = -1, $dom = $("div.auto_container");
+            that.$element.on("keydown", function (e) {
+                var keyCode = e.keyCode, vLength = $dom.children("div").length - 1;
+                if (keyCode === 13) {
+                    //enter
+                    that.destroy($dom.children("div"));
+                    i = -1;
+                } else if (keyCode === 38) //up
+                {
+                    if (i <= vLength && i > -1) {
+                        i--;
+                    }
+
+                } else if (keyCode === 40) { //down
+                    if (i < vLength) {
+                        i++;
+                    }
+
+                } else if (keyCode === 8) {
+                    i = -1;
+                }
+                $dom.children("div").each(function (iv) {
+                    if (i == iv) {
+                        $dom.children("div").removeClass("active");
+                        $(this).addClass("active");
+                        // that.$element.val($dom.children("div.active").text());
+                    }
+                })
+                if (keyCode === 38 || keyCode === 40) {
+                    that.$element.val($dom.children("div.active").text());
+                }
+
+            })
+
         },
 
         textVal: function (arr) {
